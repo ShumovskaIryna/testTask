@@ -40,6 +40,11 @@ class Vector {
         this._y -= y;
     }
 
+    public multByNumber(value: number): void {
+        this._x *= value;
+        this._y *= value;
+    }
+
     public showVector(): void {
         console.log(`X is equal to - ${this._x}, Y is equal to - ${this._y}`);
     }

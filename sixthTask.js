@@ -1,8 +1,10 @@
 // #6 Проверить является ли строка палиндромом
 function poly(str) {
-  let check = '';
-  for (let i = str.length - 1; i >= 0; --i) {
-    check += str[i];
-  }
-  return str == check;
+    const len = Math.floor(str.length / 2);
+    for (let i = 0; i < len; i++) {
+        if (str[i] !== str[str.length - i - 1]) {
+            return false;
+        }
+    }
+    return true;
 }
